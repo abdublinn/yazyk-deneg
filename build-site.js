@@ -843,7 +843,7 @@ function renderArticle(chapterIdx, article, part, prevLink, nextLink) {
       <h1 class="article__title">${esc(article.title)}</h1>
       <div class="article__meta">
         <span>~${rt} мин чтения</span>
-        ${article.url ? `<span>Оригинал: <a href="${esc(article.url)}" target="_blank" rel="noopener">${esc(article.url.replace(/^https?:\/\//, ''))}</a></span>` : ''}
+        ${article.url ? `<span>Сокращённая версия. Полный текст: <a href="${esc(article.url)}" target="_blank" rel="noopener">${esc(article.url.replace(/^https?:\/\//, ''))}</a></span>` : ''}
       </div>
     </header>
     <div class="article__body">
@@ -851,7 +851,7 @@ function renderArticle(chapterIdx, article, part, prevLink, nextLink) {
     </div>
 
     ${article.url ? `<p class="article__cta">
-      Прочитать на Дзене и оставить комментарий: <a href="${esc(article.url)}" target="_blank" rel="noopener">${esc(article.url.replace(/^https?:\/\//, ''))}</a>
+      Это сокращённая версия главы. Полный текст, с примерами и подробностями, и обсуждение в комментариях читайте на Дзене: <a href="${esc(article.url)}" target="_blank" rel="noopener">${esc(article.url.replace(/^https?:\/\//, ''))}</a>
     </p>` : ''}
 
     <nav class="chapter-nav">
